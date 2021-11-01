@@ -1,7 +1,7 @@
 # ProffieOS_5.9-BC_fork
 For use with custom "non-canon" saber_BC_buttons prop file. Includes upgrades from 5.9 towards OS6.  
 
- Control software for lightsabers and other props.  
+ ProffieOS Control software for lightsabers and other props.  
  http://fredrik.hubbe.net/lightsaber/teensy_saber.html  
  Copyright (c) 2016-2019 Fredrik Hubinette  
  Additional copyright holders listed inline below.  
