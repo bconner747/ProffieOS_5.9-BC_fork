@@ -1,0 +1,16 @@
+Many are courtesy of Plecter Labs CFX Default Package.
+
+##################################################################################
+## BMP files (static or animated) to be rendered on OLED 128x32 pixels
+##################################################################################
+
+## Released under Creative Commons License Attribution-ShareAlike "CC BY-SA" 
+
+##################################################################################
+## Crafted by (in non particular order):
+##################################################################################
+
+- Tatsuo Hamada
+- Erv' Plecter
+- ProtonGamer
+- Brian Conner
