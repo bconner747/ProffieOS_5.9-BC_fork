@@ -511,7 +511,8 @@ public:
       if (SFX_volup) {
         hybrid_font.PlayCommon(&SFX_volup);
       } else {
-        beeper.Beep(0.5, 2000);
+        beeper.Beep(0.10, 2000);
+        beeper.Beep(0.20, 2500);
       }
       STDOUT.print("Volume Up - Current Volume: ");
       STDOUT.println(dynamic_mixer.get_volume());
@@ -555,7 +556,8 @@ public:
       if (SFX_voldown) {
         hybrid_font.PlayCommon(&SFX_voldown);
       } else {
-        beeper.Beep(0.5, 2000);
+        beeper.Beep(0.10, 2000);
+        beeper.Beep(0.20, 1500);
       }
       STDOUT.print("Volume Down - Current Volume: ");
       STDOUT.println(dynamic_mixer.get_volume());
@@ -595,7 +597,7 @@ public:
       case EVENTID(BUTTON_POWER, EVENT_PRESSED, MODE_ON):
       case EVENTID(BUTTON_AUX, EVENT_PRESSED, MODE_ON):
       case EVENTID(BUTTON_AUX2, EVENT_PRESSED, MODE_ON):
-        if (accel_.x < -0.15) {
+        if (accel_.x < -0.15) { // maybe use for drab on ceiling???
           pointing_down_ = true;
         } else {
           pointing_down_ = false;
@@ -778,8 +780,9 @@ public:
         if (SFX_vmbegin) {
           hybrid_font.PlayCommon(&SFX_vmbegin);
         } else {
+          beeper.Beep(0.1, 1000);
           beeper.Beep(0.1, 2000);
-          beeper.Beep(0.1, 2500);
+          beeper.Beep(0.1, 3000);
         }
         STDOUT.println("Enter Volume Menu");
       } else {
@@ -787,8 +790,9 @@ public:
         if (SFX_vmend) {
           hybrid_font.PlayCommon(&SFX_vmend);
         } else {
-          beeper.Beep(0.1, 2500);
+          beeper.Beep(0.1, 3000);
           beeper.Beep(0.1, 2000);
+          beeper.Beep(0.1, 1000);
         }
         STDOUT.println("Exit Volume Menu");
       }
@@ -1106,7 +1110,10 @@ public:
         if (SFX_dim) {
           hybrid_font.PlayCommon(&SFX_dim);
         } else {
-          beeper.Beep(0.5, 3000);
+          beeper.Beep(0.1, 1300);
+          beeper.Beep(0.1, 900);
+          beeper.Beep(0.1, 600);
+          beeper.Beep(0.1, 300);
         }
         return;
       case EFFECT_BATTERY_LEVEL: // On-Demand Battery Level
